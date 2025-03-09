@@ -1,0 +1,11 @@
+<div class="reloj-digital">
+  <h1>{{ horaActual }}</h1>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

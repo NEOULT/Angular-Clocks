@@ -1,0 +1,21 @@
+.time-slider {
+  margin-top: 20px;
+}
+
+.slider {
+  margin-bottom: 15px;
+}
+
+.slider label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.slider input[type="range"] {
+  width: 200px;
+}
+
+.slider span {
+  font-size: 1rem;
+  margin-left: 10px;
+}

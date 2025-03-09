@@ -1,0 +1,12 @@
+<div class="voice-clock">
+  <h1>{{ horaActual }}</h1>
+  <button (click)="speakTime()">Leer Hora</button>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()"
+  ></app-time-slider>
+</div>

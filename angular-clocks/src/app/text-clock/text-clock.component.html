@@ -1,0 +1,13 @@
+<div class="text-clock">
+  <div class="clock-text">
+    {{ getHoraEnTexto() }}
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

@@ -1,0 +1,10 @@
+.reloj-digital {
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline;
+}

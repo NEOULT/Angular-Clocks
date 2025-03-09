@@ -1,0 +1,82 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url('assets/clock3.jpeg'); /* Imagen de fondo temática */
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2575fc; /* Color temático */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: #ff3b2f;
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  background-color: #2575fc;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.auth-button:hover {
+  background-color: #1a4fd8;
+}
+
+.toggle-mode {
+  margin-top: 20px;
+  color: #666;
+}
+
+.toggle-mode a {
+  color: #2575fc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-mode a:hover {
+  color: #1a4fd8;
+}

@@ -1,0 +1,26 @@
+<div class="time-slider">
+  <div class="slider">
+    <label for="horas">Horas:</label>
+    <input type="range" id="horas" min="0" max="23" [(ngModel)]="horas"
+           (input)="cambiarTiempo()"
+           (mousedown)="comenzarAjuste()"
+           (mouseup)="terminarAjuste()">
+    <span>{{ horas }}</span>
+  </div>
+  <div class="slider">
+    <label for="minutos">Minutos:</label>
+    <input type="range" id="minutos" min="0" max="59" [(ngModel)]="minutos"
+           (input)="cambiarTiempo()"
+           (mousedown)="comenzarAjuste()"
+           (mouseup)="terminarAjuste()">
+    <span>{{ minutos }}</span>
+  </div>
+  <div class="slider">
+    <label for="segundos">Segundos:</label>
+    <input type="range" id="segundos" min="0" max="59" [(ngModel)]="segundos"
+           (input)="cambiarTiempo()"
+           (mousedown)="comenzarAjuste()"
+           (mouseup)="terminarAjuste()">
+    <span>{{ segundos }}</span>
+  </div>
+</div>

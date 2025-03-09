@@ -1,0 +1,18 @@
+<div class="circular-clock">
+  <div class="clock-face">
+    <!-- Círculo para las horas -->
+    <div class="circle hours" [style.transform]="'rotate(' + getRotation(getHours(), 24) + 'deg)'"></div>
+    <!-- Círculo para los minutos -->
+    <div class="circle minutes" [style.transform]="'rotate(' + getRotation(getMinutes(), 60) + 'deg)'"></div>
+    <!-- Círculo para los segundos -->
+    <div class="circle seconds" [style.transform]="'rotate(' + getRotation(getSeconds(), 60) + 'deg)'"></div>
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

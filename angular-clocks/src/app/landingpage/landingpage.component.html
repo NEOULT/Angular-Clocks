@@ -1,0 +1,93 @@
+<div class="landing-page">
+  <header class="header">
+    <h1>Bienvenido al Mundo de los Relojes</h1>
+    <p>Explora diferentes formas únicas de visualizar el tiempo.</p>
+    <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
+  </header>
+
+  <section class="features">
+    <!-- Reloj Digital -->
+    <div class="feature">
+      <h2>Reloj Digital</h2>
+      <app-digital-clock [mostrarSlider]="false" [relojEstatico]="true"></app-digital-clock>
+      <button routerLink="/digital-clock" class="cta-button">Ver Reloj Digital</button>
+      <p class="description">Precisión y modernidad en un formato digital fácil de leer.</p>
+    </div>
+
+    <!-- Reloj Analógico -->
+    <div class="feature">
+      <h2>Reloj Analógico</h2>
+      <app-analog-clock [mostrarSlider]="false" [relojEstatico]="true"></app-analog-clock>
+      <button routerLink="/analog-clock" class="cta-button">Ver Reloj Analógico</button>
+      <p class="description">Un clásico atemporal con manecillas que nunca pasan de moda.</p>
+    </div>
+
+    <!-- Reloj Binario -->
+    <div class="feature">
+      <h2>Reloj Binario</h2>
+      <app-binary-clock [mostrarSlider]="false" [relojEstatico]="true"></app-binary-clock>
+      <button routerLink="/binary-clock" class="cta-button">Ver Reloj Binario</button>
+      <p class="description">Descifra la hora en código binario, perfecto para los amantes de la tecnología.</p>
+    </div>
+
+    <!-- Reloj Circular -->
+    <div class="feature">
+      <h2>Reloj Circular</h2>
+      <app-circular-clock [mostrarSlider]="false" [relojEstatico]="true"></app-circular-clock>
+      <button routerLink="/circular-clock" class="cta-button">Ver Reloj Circular</button>
+      <p class="description">Minimalismo en su máxima expresión con círculos concéntricos.</p>
+    </div>
+
+    <!-- Reloj Textual -->
+    <div class="feature">
+      <h2>Reloj Textual</h2>
+      <app-text-clock [mostrarSlider]="false" [relojEstatico]="true"></app-text-clock>
+      <button routerLink="/text-clock" class="cta-button">Ver Reloj Textual</button>
+      <p class="description">La hora en palabras, para una lectura rápida y sencilla.</p>
+    </div>
+
+    <!-- Reloj Morse -->
+    <div class="feature">
+      <h2>Reloj Morse</h2>
+      <app-morse-clock [mostrarSlider]="false" [relojEstatico]="true"></app-morse-clock>
+      <button routerLink="/morse-clock" class="cta-button">Ver Reloj Morse</button>
+      <p class="description">Descifra la hora en código Morse, ideal para los curiosos.</p>
+    </div>
+
+    <!-- Reloj de Barras -->
+    <div class="feature">
+      <h2>Reloj de Barras</h2>
+      <app-bar-clock [mostrarSlider]="false" [relojEstatico]="true"></app-bar-clock>
+      <button routerLink="/bar-clock" class="cta-button">Ver Reloj de Barras</button>
+      <p class="description">Visualiza el tiempo con barras de progreso, perfecto para los amantes del diseño.</p>
+    </div>
+
+    <!-- Reloj Romano -->
+    <div class="feature">
+      <h2>Reloj Romano</h2>
+      <app-roman-clock [mostrarSlider]="false" [relojEstatico]="true"></app-roman-clock>
+      <button routerLink="/roman-clock" class="cta-button">Ver Reloj Romano</button>
+      <p class="description">Elegancia clásica con números romanos, para los amantes de la historia.</p>
+    </div>
+
+    <!-- Reloj de 7 Segmentos -->
+    <div class="feature">
+      <h2>Reloj de 7 Segmentos</h2>
+      <app-seven-segment-clock [mostrarSlider]="false" [relojEstatico]="true"></app-seven-segment-clock>
+      <button routerLink="/seven-segment-clock" class="cta-button">Ver Reloj de 7 Segmentos</button>
+      <p class="description">Nostalgia y tecnología con dígitos de 7 segmentos.</p>
+    </div>
+
+    <!-- Reloj de Voz -->
+    <div class="feature">
+      <h2>Reloj de Voz</h2>
+      <app-voice-clock [mostrarSlider]="false" [relojEstatico]="true"></app-voice-clock>
+      <button routerLink="/voice-clock" class="cta-button">Ver Reloj de Voz</button>
+      <p class="description">Escucha la hora en voz alta, ideal para los amantes de la accesibilidad.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Mundo de Relojes. Todos los derechos reservados.</p>
+  </footer>
+</div>

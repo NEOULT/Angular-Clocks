@@ -1,0 +1,30 @@
+.morse-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.morse-display {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.morse-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.morse-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.morse-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+}

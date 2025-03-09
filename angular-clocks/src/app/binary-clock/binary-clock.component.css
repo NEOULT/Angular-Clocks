@@ -1,0 +1,44 @@
+.binary-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.binary-display {
+  display: flex;
+  gap: 20px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.binary-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.binary-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.binary-bit {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.binary-bit.active {
+  background-color: #00ff00; /* Color para los bits activos (1) */
+}

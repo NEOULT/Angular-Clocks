@@ -1,0 +1,34 @@
+<div class="bar-clock">
+  <!-- Barra para las horas -->
+  <div class="bar">
+    <div class="label">Horas</div>
+    <div class="bar-container">
+      <div class="bar-fill" [style.width.%]="getBarPercentage(getTimeParts().horas, 24)"></div>
+    </div>
+  </div>
+
+  <!-- Barra para los minutos -->
+  <div class="bar">
+    <div class="label">Minutos</div>
+    <div class="bar-container">
+      <div class="bar-fill" [style.width.%]="getBarPercentage(getTimeParts().minutos, 60)"></div>
+    </div>
+  </div>
+
+  <!-- Barra para los segundos -->
+  <div class="bar">
+    <div class="label">Segundos</div>
+    <div class="bar-container">
+      <div class="bar-fill" [style.width.%]="getBarPercentage(getTimeParts().segundos, 60)"></div>
+    </div>
+  </div>
+</div>
+
+<app-time-slider
+  *ngIf="mostrarSlider"
+  [mostrarSlider]="mostrarSlider"
+  [relojEstatico]="relojEstatico"
+  (tiempoCambiado)="actualizarHoraManual($event)"
+  (ajusteIniciado)="comenzarAjuste()"
+  (ajusteTerminado)="terminarAjuste()">
+</app-time-slider>

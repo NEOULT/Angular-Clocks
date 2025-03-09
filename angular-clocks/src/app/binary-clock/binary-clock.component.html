@@ -1,0 +1,30 @@
+<div class="binary-clock">
+  <div class="binary-display">
+    <div class="binary-column">
+      <div class="binary-label">Horas</div>
+      <div *ngFor="let bit of getBinaryTime().horas; let i = index" class="binary-bit" [class.active]="bit === 1">
+        {{ [8, 4, 2, 1][i] || '' }}
+      </div>
+    </div>
+    <div class="binary-column">
+      <div class="binary-label">Minutos</div>
+      <div *ngFor="let bit of getBinaryTime().minutos; let i = index" class="binary-bit" [class.active]="bit === 1">
+        {{ [32, 16, 8, 4, 2, 1][i] || '' }}
+      </div>
+    </div>
+    <div class="binary-column">
+      <div class="binary-label">Segundos</div>
+      <div *ngFor="let bit of getBinaryTime().segundos; let i = index" class="binary-bit" [class.active]="bit === 1">
+        {{ [32, 16, 8, 4, 2, 1][i] || '' }}
+      </div>
+    </div>
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

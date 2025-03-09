@@ -1,0 +1,22 @@
+<div class="analog-clock">
+  <div class="clock-face">
+    <!-- Números romanos -->
+    <div class="number roman-12">XII</div>
+    <div class="number roman-3">III</div>
+    <div class="number roman-6">VI</div>
+    <div class="number roman-9">IX</div>
+
+    <!-- Manecillas -->
+    <div class="hand hour-hand" [style.transform]="getHourRotation()"></div>
+    <div class="hand minute-hand" [style.transform]="getMinuteRotation()"></div>
+    <div class="hand second-hand" [style.transform]="getSecondRotation()"></div>
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

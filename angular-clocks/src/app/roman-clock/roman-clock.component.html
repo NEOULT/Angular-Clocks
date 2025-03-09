@@ -1,0 +1,24 @@
+<div class="roman-clock">
+  <div class="roman-display">
+    <div class="roman-row">
+      <span class="roman-label">Horas:</span>
+      <span class="roman-value">{{ getRomanTime().horas }}</span>
+    </div>
+    <div class="roman-row">
+      <span class="roman-label">Minutos:</span>
+      <span class="roman-value">{{ getRomanTime().minutos }}</span>
+    </div>
+    <div class="roman-row">
+      <span class="roman-label">Segundos:</span>
+      <span class="roman-value">{{ getRomanTime().segundos }}</span>
+    </div>
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

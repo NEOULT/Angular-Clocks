@@ -1,0 +1,53 @@
+.seven-segment-clock {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.digit {
+  position: relative;
+  width: 50px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.segment {
+  position: absolute;
+  background-color: #222;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.segment.on {
+  background-color: red;
+  opacity: 1;
+}
+
+/* Segmentos horizontales */
+.segment-0, .segment-3, .segment-6 {
+  width: 40px;
+  height: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.segment-0 { top: 5px; } /* Segmento superior */
+.segment-3 { top: 50%; transform: translate(-50%, -50%); } /* Segmento medio */
+.segment-6 { bottom: 5px; } /* Segmento inferior */
+
+/* Segmentos verticales */
+.segment-1, .segment-2, .segment-4, .segment-5 {
+  width: 8px;
+  height: 35px;
+}
+
+.segment-1 { top: 5px; left: 5px; } /* Vertical superior izquierdo */
+.segment-2 { top: 5px; right: 5px; } /* Vertical superior derecho */
+.segment-4 { bottom: 5px; left: 5px; } /* Vertical inferior izquierdo */
+.segment-5 { bottom: 5px; right: 5px; } /* Vertical inferior derecho */

@@ -1,0 +1,24 @@
+<div class="morse-clock">
+  <div class="morse-display">
+    <div class="morse-row">
+      <span class="morse-label">Horas:</span>
+      <span class="morse-code">{{ getMorseTime().horas }}</span>
+    </div>
+    <div class="morse-row">
+      <span class="morse-label">Minutos:</span>
+      <span class="morse-code">{{ getMorseTime().minutos }}</span>
+    </div>
+    <div class="morse-row">
+      <span class="morse-label">Segundos:</span>
+      <span class="morse-code">{{ getMorseTime().segundos }}</span>
+    </div>
+  </div>
+  <app-time-slider
+    *ngIf="mostrarSlider"
+    [mostrarSlider]="mostrarSlider"
+    [relojEstatico]="relojEstatico"
+    (tiempoCambiado)="actualizarHoraManual($event)"
+    (ajusteIniciado)="comenzarAjuste()"
+    (ajusteTerminado)="terminarAjuste()">
+  </app-time-slider>
+</div>

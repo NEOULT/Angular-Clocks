@@ -1,0 +1,17 @@
+<div class="seven-segment-clock">
+  <div *ngFor="let digit of timeArray" class="digit">
+    <div *ngFor="let segment of getSegments(digit); let i = index"
+         [class.on]="segment"
+         class="segment segment-{{ i }}">
+    </div>
+  </div>
+</div>
+
+<app-time-slider
+  *ngIf="mostrarSlider"
+  [mostrarSlider]="mostrarSlider"
+  [relojEstatico]="relojEstatico"
+  (tiempoCambiado)="actualizarHoraManual($event)"
+  (ajusteIniciado)="comenzarAjuste()"
+  (ajusteTerminado)="terminarAjuste()">
+</app-time-slider>
